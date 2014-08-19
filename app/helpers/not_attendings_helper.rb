@@ -1,0 +1,2 @@
+module NotAttendingsHelper
+end

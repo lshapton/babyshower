@@ -1,0 +1,72 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ========================================
+	CSS Styling for Build Weblox Template.
+	www.buildweblox.com
+   ======================================== */
+
+
+
+/* Home
+======================================== */
+.home{
+	background-image: url("https://s3-us-west-2.amazonaws.com/babyshower/background_stripes.png");
+	background-repeat: repeat;
+	height: 1000px;
+
+	.clipart{
+		margin-top: 250px;
+		padding-left: 5%;
+	}
+
+	.invite{
+		background-color: #fff;
+		border: 5px solid #D95032;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		padding: 20px;
+		text-align: center;
+
+		.clipart_print{
+			display:none;
+		}
+
+		.details{
+			border-top: 1px solid #D95032;
+			border-bottom: 1px solid #D95032;
+			display: table;
+
+			
+			.table-cell{
+				display: table-cell;
+				vertical-align: middle;
+				float:none;
+			}
+		}
+	}
+}
+
+@media print {
+    .clipart{
+    	display:none;
+    }
+
+    .details{
+    	width: 100%;
+    }
+
+    .map{
+    	display:none;
+    }
+
+    .print{
+    	display:none
+    }
+
+    .clipart_print{
+    	display: block;
+    }
+}
+

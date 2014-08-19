@@ -1,0 +1,53 @@
+
+<%= form_for(metric) do |f| %>
+	<div class="modal-body">
+	  <% if metric.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(metric.errors.count, "error") %> prohibited this attending from being saved:</h2>
+
+	      <ul>
+	      <% metric.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <div class="row form-group">
+	    <div class="col-sm-4">
+	    <%= f.label :first_name, :class => "control-label" %><br>
+	    </div>
+	    <div class="col-sm-8">
+	    	<%= f.text_field :first_name, :class=> "form-control" %>
+	    </div>
+	  </div>
+
+	 	<div class="row form-group">
+	    <div class="col-sm-4">
+	    <%= f.label :last_name, :class => "control-label" %><br>
+	    </div>
+	    <div class="col-sm-8">
+	    	<%= f.text_field :last_name, :class=> "form-control" %>
+	    </div>
+	  </div><br/>
+
+	  <div class="row form-group">
+	    <div class="col-sm-12">
+	    <%= f.label :message, "Leave a message for parents to be:", :class => "control-label" %><br>
+	    </div>
+	    <div class="col-sm-12">
+	    	<%= f.text_area :message, :class=> "form-control", :rows => 4 %>
+	    </div>
+	  </div>
+
+
+	  
+	</div>
+
+
+	<div class="modal-footer">
+	  <div type="button" class="btn btn-default" data-dismiss="modal">Close</div>
+    <%= f.submit "Not Attending", :class => "btn btn-light_blue" %>
+	</div>
+
+<% end %>

@@ -1,0 +1,79 @@
+
+
+<div class="home">
+  <div class="row">
+    <div class="clipart col-md-3">
+      <%= image_tag("https://s3-us-west-2.amazonaws.com/babyshower/anchor.png", size: "200") %>
+    </div>
+    <div class="col-md-6 invite center-vertically">   
+        <h5>Please join us for a</h5>
+          <h2 class="light_blue" data-scroll-reveal>Baby Shower</h2>
+          <h5>honoring</h5>
+          <h2 class="pale_green" data-scroll-reveal="wait .25s">Marie Boudreault</h2><br>
+          
+          <div class="row details">
+            <div class="col-md-4 table-cell">
+              <h5>Sept 20th</h5>
+            </div>
+            <div class="col-md-4 table-cell">
+              <h5>1 - 4pm</h5>
+            </div>
+            <div class="col-md-4 table-cell">
+              <h5>9 Shawna Rd, London</h5>
+            </div>
+          </div> <br/>
+
+          <div class="row">
+            <h6>Marie and John have not yet registered. We are organizing a group gift -stroller. Please let me know if you would like to contribute</h6>
+          </div>
+
+          <%= image_tag("bouy.png", size: "50") %><br/>
+
+          <div class="row">
+            <h6>Please RSVP at your earliest convenience.</h6>
+          </div>
+
+          <a data-scroll-reveal="wait .5s" href="#" class="btn btn-default" data-toggle="modal" data-target="#willAttend">Will attend</a>
+          <a data-scroll-reveal="wait .5s" href="#" class="btn btn-default" data-toggle="modal" data-target="#willNotAttend">Will not attend</a>
+        
+          <div class="row">
+            <br/>
+            <h6 class="orange">Any questions? Or if you would like to contribute to the group gift, send me an email at shaptonleanne@gmail.com or give me a call at 647.919.3044</h6>
+          </div>
+
+      </div>
+
+
+      <div class="clipart col-md-3">
+        <%= image_tag("steer.png", size: "200") %>
+      </div>
+
+
+    </div>
+</div>
+
+
+<!-- Will attend Modal -->
+<div class="modal fade" id="willAttend" tabindex="-1" role="dialog" aria-labelledby="willAttend" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <%= render 'form_attending', metric: @attending  %>
+
+    </div>
+  </div>
+</div>
+
+<!-- Will not attend Modal -->
+<div class="modal fade" id="willNotAttend" tabindex="-1" role="dialog" aria-labelledby="willAttend" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+
+      <%= render 'form_not_attending', metric: @not_attending %>
+
+      </div>
+    </div>
+  </div>
+</div>

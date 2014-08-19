@@ -15,14 +15,6 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :development, :test do
-  # gem 'foreigner'
-  # gem 'seed_dump'
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
-  gem 'database_cleaner'
-  gem 'faker'
-end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

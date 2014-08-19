@@ -1,15 +1,29 @@
 source 'https://rubygems.org'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.4'
+
+# Use sqlite3 as the database for Active Record
+group :development do
+  gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'annotate'
+end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
 
+group :development, :test do
+  # gem 'foreigner'
+  # gem 'seed_dump'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'faker'
+end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

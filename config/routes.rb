@@ -5,9 +5,13 @@ Rails.application.routes.draw do
 
   get 'home' => 'home#index'
 
-  get "not_attendings" => 'not_attendings#show'
+  get "not_attendings/show" => 'not_attendings#index'
 
-  get "attendings" => 'attendings#show'
+  get "attendings/show" => 'attendings#index'
+
+  get "not_attendings/show" => 'not_attendings#show'
+
+  get "attendings/show" => 'attendings#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -52,7 +52,3 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'aws-sdk'
-
-gem 'rails_12factor'
-
-gem 'pg'

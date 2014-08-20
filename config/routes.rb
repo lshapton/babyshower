@@ -4,14 +4,10 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get 'home' => 'home#index'
+  
+  resources :not_attendings
 
-  get "not_attendings/show" => 'not_attendings#index'
-
-  get "attendings/show" => 'attendings#index'
-
-  get "not_attendings/show" => 'not_attendings#show'
-
-  get "attendings/show" => 'attendings#show'
+  resources :attendings
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

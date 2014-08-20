@@ -1,5 +1,7 @@
-<h1>New attending</h1>
+<% if admin_signed_in? %>
+	<h1>New attending</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Back', attendings_path %>
+	<%= link_to 'Back', attendings_path %>
+<% end %> 

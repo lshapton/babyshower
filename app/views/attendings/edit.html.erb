@@ -1,6 +1,8 @@
-<h1>Editing attending</h1>
+<% if admin_signed_in? %>
+	<h1>Editing attending</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Show', @attending %> |
-<%= link_to 'Back', attendings_path %>
+	<%= link_to 'Show', @attending %> |
+	<%= link_to 'Back', attendings_path %>
+<% end %> 

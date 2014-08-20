@@ -1,5 +1,7 @@
-<h1>New not_attending</h1>
+<% if admin_signed_in? %>
+	<h1>New not_attending</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Back', not_attendings_path %>
+	<%= link_to 'Back', not_attendings_path %>
+<% end %> 

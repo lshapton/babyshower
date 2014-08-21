@@ -1,31 +1,32 @@
 <% if admin_signed_in? %>
-  <h1>Listing not_attendings</h1>
+  <h3>Cannot attend</h3><br/>
 
-  <table>
-    <thead>
-      <tr>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Email</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @not_attendings.each do |not_attending| %>
+  <container>
+    <table class="table">
+      <thead>
         <tr>
-          <td><%= not_attending.first_name %></td>
-          <td><%= not_attending.last_name %></td>
-          <td><%= not_attending.email %></td>
-          <td><%= link_to 'Show', not_attending %></td>
-          <td><%= link_to 'Edit', edit_not_attending_path(not_attending) %></td>
-          <td><%= link_to 'Destroy', not_attending, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Message</th>
+          <th colspan="3"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @not_attendings.each do |not_attending| %>
+          <tr>
+            <td><%= not_attending.first_name %></td>
+            <td><%= not_attending.last_name %></td>
+            <td><%= not_attending.message %></td>
+            <td><%= link_to 'Show', not_attending %></td>
+            <td><%= link_to 'Edit', edit_not_attending_path(not_attending) %></td>
+            <td><%= link_to 'Destroy', not_attending, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </container>
 
   <br>
 
-  <%= link_to 'New Not attending', new_not_attending_path %>
 <% end %> 
